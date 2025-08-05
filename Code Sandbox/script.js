@@ -116,4 +116,12 @@ const htmlCode = document.getElementById('html-code');
 const cssCode = document.getElementById('css-code');
 const jsCode = document.getElementById('js-code');
 const output = document.getElementById('output');
-const saveButton = document.getElementById('save-button');
+const saveButton = document.getElementById('save-button');
+const resetButton = document.getElementById('reset-button');
+const notificationModal = document.getElementById('notification-modal');
+const modalMessage = document.getElementById('modal-message');
+const modalCloseButton = document.getElementById('modal-close-button');
+
+
+const defaultHtml = `<h1>Hello, Sandbox!</h1>\n<p>Start coding here.</p>`;
+const defaultCss = `body {\n  font-family: sans-serif;\n  color: #333;\n}`;
