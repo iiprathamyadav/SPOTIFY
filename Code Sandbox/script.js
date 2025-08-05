@@ -132,4 +132,12 @@ function runCode() {
     const css = cssCode.value;
     const js = jsCode.value;
 
-    const fullCode = `
+    const fullCode = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>${css}</style>
+        </head>
+        <body>
+            ${html}
+            <script>${js}<\/script>
