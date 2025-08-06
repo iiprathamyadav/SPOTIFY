@@ -140,4 +140,12 @@ function runCode() {
         </head>
         <body>
             ${html}
-            <script>${js}<\/script>
+            <script>${js}<\/script>
+        </body>
+        </html>
+    `;
+    
+    output.srcdoc = fullCode;
+}
+
+
