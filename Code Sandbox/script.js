@@ -172,4 +172,12 @@ function loadCode() {
     cssCode.value = savedCss || defaultCss;
     jsCode.value = savedJs || defaultJs;
 
-    runCode(); // Run the code after loading
+    runCode(); // Run the code after loading
+}
+
+// Function to reset all the code to its default state
+function resetCode() {
+    const isConfirmed = window.confirm("Are you sure you want to reset all code? This action cannot be undone.");
+    if (isConfirmed) {
+        htmlCode.value = defaultHtml;
+        cssCode.value = defaultCss;
