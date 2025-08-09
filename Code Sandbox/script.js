@@ -188,4 +188,12 @@ function resetCode() {
         runCode();
         showNotification('Code has been reset to defaults.');
     }
-}
+}
+
+// Function to display a custom notification modal
+function showNotification(message, isError = false) {
+    modalMessage.textContent = message;
+    notificationModal.classList.remove('hidden');
+    
+    // Auto-hide after 3 seconds unless it's an error
+    if (!isError) {
