@@ -180,4 +180,12 @@ function resetCode() {
     const isConfirmed = window.confirm("Are you sure you want to reset all code? This action cannot be undone.");
     if (isConfirmed) {
         htmlCode.value = defaultHtml;
-        cssCode.value = defaultCss;
+        cssCode.value = defaultCss;
+        jsCode.value = defaultJs;
+        localStorage.removeItem('sandboxHtml');
+        localStorage.removeItem('sandboxCss');
+        localStorage.removeItem('sandboxJs');
+        runCode();
+        showNotification('Code has been reset to defaults.');
+    }
+}
