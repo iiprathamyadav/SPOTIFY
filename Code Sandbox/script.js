@@ -196,4 +196,12 @@ function showNotification(message, isError = false) {
     notificationModal.classList.remove('hidden');
     
     // Auto-hide after 3 seconds unless it's an error
-    if (!isError) {
+    if (!isError) {
+        setTimeout(() => {
+            notificationModal.classList.add('hidden');
+        }, 3000);
+    }
+}
+
+// --- Event Listeners ---
+// Listen for input on all editors to run the code in real-time
