@@ -204,4 +204,12 @@ function showNotification(message, isError = false) {
 }
 
 // --- Event Listeners ---
-// Listen for input on all editors to run the code in real-time
+// Listen for input on all editors to run the code in real-time
+htmlCode.addEventListener('input', runCode);
+cssCode.addEventListener('input', runCode);
+jsCode.addEventListener('input', runCode);
+
+// Listen for clicks on the save and reset buttons
+saveButton.addEventListener('click', saveCode);
+resetButton.addEventListener('click', resetCode);
+modalCloseButton.addEventListener('click', () => {
